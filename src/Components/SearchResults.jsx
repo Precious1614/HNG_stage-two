@@ -12,10 +12,12 @@ const SearchResults = () => {
         <div className="search-results">
           {searchResults.map((movie) => (
             <div key={movie.id} className="search-result">
-              <img
-                src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
-                alt={movie.title}
-              />
+              <div className="result-img">
+                <img
+                  src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+                  alt={movie.title}
+                />
+              </div>
               <p>{movie.title}</p>
               <p>Release Date: {movie.release_date}</p>
             </div>

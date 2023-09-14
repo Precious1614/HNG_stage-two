@@ -122,7 +122,7 @@
 }
 
 .movie-card {
-  width: 300px;
+  width: 250px;
   margin-bottom: 5rem;
   position: relative;
 }
@@ -169,10 +169,13 @@
   gap: 2rem;
 }
 .search-result {
-  width: 250px;
+  width: 300px;
   margin-bottom: 5rem;
 }
 
+.result-img > img {
+  width: 300px;
+}
 .footer {
   display: flex;
   flex-direction: column;
@@ -315,4 +318,16 @@
 }
 .details-cont > p {
   margin-bottom: 1rem;
+}
+
+@media (max-width: 1025px) {
+  .movie-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .cont-1 {
+    width: 80%;
+  }
+  .searchbox {
+    width: 400px;
+  }
 }
