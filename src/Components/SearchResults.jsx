@@ -19,7 +19,7 @@ const SearchResults = () => {
                 />
               </div>
               <p>{movie.title}</p>
-              <p>Release Date: {movie.release_date}</p>
+              <p>{movie.release_date}</p>
             </div>
           ))}
         </div>

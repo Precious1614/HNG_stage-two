@@ -66,8 +66,8 @@ function TopRatedMovies() {
                   />
                   <h2 className="title">{movie.title}</h2>
                 </Link>
-                <p>Release Date: {movie.release_date}</p>
-                <p>Rating: {movie.vote_average}</p>
+                <p>{movie.release_date}</p>
+                <p>{movie.vote_average}</p>
               </div>
             ))}
           </div>
