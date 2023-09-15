@@ -220,7 +220,7 @@
 }
 .movieDetails {
   display: flex;
-  height: 100vh;
+  /* height: 100vh; */
 }
 .logobar {
   margin-top: 2rem;
@@ -231,6 +231,7 @@
   border: 1px solid rgba(0, 0, 0, 0.3);
   background: #fff;
   gap: 2rem;
+  margin-right: 2rem;
 }
 .side-bar {
   display: flex;
@@ -295,7 +296,7 @@
   border: none;
 }
 .details-cont {
-  margin-left: 4rem;
+  /* margin-left: 4rem; */
   width: 70%;
 }
 
@@ -330,4 +331,6 @@
   .searchbox {
     width: 400px;
   }
+  .side-cont {
+    width: 25%;}
 }
