@@ -50,12 +50,17 @@ function TopRatedMovies() {
         ) : (
           <div className="movie-list">
             {topRatedMovies.map((movie, index) => (
-              <div className="movie-card" key={movie.id}>
+              <div
+                className="movie-card"
+                key={movie.id}
+                data-testid="movie-card"
+              >
                 <button onClick={() => handleButtonClick(index)}>
                   <img
                     src={heart}
                     alt=""
                     className={movieClicks[index] ? "heart clicked" : "heart"}
+                    data-testid={`heart-${index}`}
                   />
                 </button>
                 <Link to={`/movies/${movie.id}`}>
@@ -63,11 +68,18 @@ function TopRatedMovies() {
                     className="poster-card"
                     src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
                     alt={movie.title}
+                    data-testid={`movie-poster-${index}`}
                   />
-                  <h2 className="title">{movie.title}</h2>
+                  <h2 className="title" data-testid={`movie-title-${index}`}>
+                    {movie.title}
+                  </h2>
                 </Link>
-                <p>{movie.release_date}</p>
-                <p>{movie.vote_average}</p>
+                <p data-testid={`movie-release-date-${index}`}>
+                  {movie.release_date}
+                </p>
+                <p data-testid={`movie-vote-average-${index}`}>
+                  {movie.vote_average}
+                </p>
               </div>
             ))}
           </div>

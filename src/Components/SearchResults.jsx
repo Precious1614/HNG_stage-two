@@ -10,21 +10,22 @@ const SearchResults = () => {
     <div>
       {searchResults.length > 0 ? (
         <div className="search-results">
-          {searchResults.map((movie) => (
-            <div key={movie.id} className="search-result">
+          {searchResults.map((movie, index) => (
+            <div key={movie.id} className="search-result" data-testid={`search-result-${index}`}>
               <div className="result-img">
                 <img
                   src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
                   alt={movie.title}
+                  data-testid={`search-result-image-${index}`}
                 />
               </div>
-              <p>{movie.title}</p>
-              <p>{movie.release_date}</p>
+              <p data-testid={`search-result-title-${index}`}>{movie.title}</p>
+              <p data-testid={`search-result-release-date-${index}`}>{movie.release_date}</p>
             </div>
           ))}
         </div>
       ) : (
-        <p>No results found.</p>
+        <p data-testid="no-results">No results found.</p>
       )}
     </div>
   );

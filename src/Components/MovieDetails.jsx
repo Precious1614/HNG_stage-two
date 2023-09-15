@@ -40,19 +40,19 @@ const MovieDetails = () => {
         <div className="side-bar">
           <img className="logobar" src={logo} alt="" />
           <div className="bar-links">
-            <Link className="barlink">
+            <Link className="barlink" data-testid="home-link">
               <img src={home} alt="" />
               Home
             </Link>
-            <Link className="barlink">
+            <Link className="barlink" data-testid="movies-link">
               <img src={movie} alt="" />
               Movies
             </Link>
-            <Link className="barlink">
+            <Link className="barlink" data-testid="tv-series-link">
               <img src={tv} alt="" />
               TV Series
             </Link>
-            <Link className="barlink">
+            <Link className="barlink" data-testid="upcoming-link">
               <img src={calender} alt="" />
               Upcoming
             </Link>
@@ -60,9 +60,9 @@ const MovieDetails = () => {
           <div className="search-bar">
             <p>Play movie quizzes and earn free tickets</p>
             <small>50k people are playing now</small>
-            <button>start playing</button>
+            <button data-testid="play-button">start playing</button>
           </div>
-          <Link className="loglink">
+          <Link className="loglink" data-testid="logout-link">
             <img src={logout} alt="" />
             Log out
           </Link>
